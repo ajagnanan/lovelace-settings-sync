@@ -32,6 +32,13 @@ resources:
 | sensor        | sensor  | **Required** | The Sensor that holds the User Settings JSON retrieved by the REST API                          |
 | username      | string  | **Optional** | Optional Username or default is the Logged In User                                              |
 
+[commits-shield]: https://img.shields.io/github/commit-activity/y/ajagnanan/ha-settings-sync.svg?style=for-the-badge
+[commits]: https://github.com/ajagnanan/ha-settings-sync/commits/master
+[license-shield]: https://img.shields.io/github/license/ajagnanan/ha-settings-sync.svg?style=for-the-badge
+[maintenance-shield]: https://img.shields.io/badge/maintainer-ajagnanan-blue.svg?style=for-the-badge
+[releases-shield]: https://img.shields.io/github/release/ajagnanan/ha-settings-sync.svg?style=for-the-badge
+[releases]: https://github.com/ajagnanan/ha-settings-sync/releases
+
 ## References
 
 Project based on: https://community.home-assistant.io/t/wth-why-most-settings-are-browser-instance-dependant/468419/16
