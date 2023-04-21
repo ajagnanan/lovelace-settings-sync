@@ -1,0 +1,50 @@
+{
+  "name": "ha-settings-sync",
+  "version": "1.0.0",
+  "description": "Home Assistant Settings Sync",
+  "keywords": [
+    "home-assistant",
+    "homeassistant",
+    "hass",
+    "automation",
+    "lovelace",
+    "custom-cards",
+    "settings",
+    "sync"
+  ],
+  "module": "settings-sync.js",
+  "repository": "git@github.com:ajagnanan/ha-settings-sync.git",
+  "author": "Adrian J",
+  "license": "MIT",
+  "dependencies": {
+    "custom-card-helpers": "^1.6.4",
+    "lit-element": "^2.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.3",
+    "@babel/plugin-proposal-class-properties": "^7.10.1",
+    "@babel/plugin-proposal-decorators": "^7.10.3",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^6.6.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^1.18.2",
+    "rollup": "^1.26.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-serve": "^1.0.1",
+    "rollup-plugin-terser": "^5.1.2",
+    "rollup-plugin-typescript2": "^0.24.3",
+    "rollup-plugin-uglify": "^6.0.3",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "start": "rollup -c rollup.config.dev.js --watch",
+    "build": "npm run lint && npm run rollup",
+    "lint": "eslint src/*.ts --fix",
+    "rollup": "rollup -c"
+  }
+}
