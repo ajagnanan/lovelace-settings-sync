@@ -33,12 +33,12 @@ resources:
 | render_ui     | boolean | **Required** | If the UI should be rendered                                                                    |
 | username      | string  | **Optional** | Optional Username or default is the Logged In User (this matches up with the JSON)              |
 
-[commits-shield]: https://img.shields.io/github/commit-activity/y/ajagnanan/ha-settings-sync.svg?style=for-the-badge
-[commits]: https://github.com/ajagnanan/ha-settings-sync/commits/master
-[license-shield]: https://img.shields.io/github/license/ajagnanan/ha-settings-sync.svg?style=for-the-badge
+[commits-shield]: https://img.shields.io/github/commit-activity/y/ajagnanan/lovelace-settings-sync.svg?style=for-the-badge
+[commits]: https://github.com/ajagnanan/lovelace-settings-sync/commits/master
+[license-shield]: https://img.shields.io/github/license/ajagnanan/lovelace-settings-sync.svg?style=for-the-badge
 [maintenance-shield]: https://img.shields.io/badge/maintainer-ajagnanan-blue.svg?style=for-the-badge
-[releases-shield]: https://img.shields.io/github/release/ajagnanan/ha-settings-sync.svg?style=for-the-badge
-[releases]: https://github.com/ajagnanan/ha-settings-sync/releases
+[releases-shield]: https://img.shields.io/github/release/ajagnanan/lovelace-settings-sync.svg?style=for-the-badge
+[releases]: https://github.com/ajagnanan/lovelace-settings-sync/releases
 
 ## Configuration
 
@@ -62,3 +62,4 @@ username: admin
 ## References
 
 Project based on: https://community.home-assistant.io/t/wth-why-most-settings-are-browser-instance-dependant/468419/16
+HA Custom Card: https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card/

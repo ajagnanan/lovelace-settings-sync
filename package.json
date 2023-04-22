@@ -1,5 +1,5 @@
 {
-  "name": "ha-settings-sync",
+  "name": "settings-sync",
   "version": "1.0.0",
   "description": "Home Assistant Settings Sync",
   "keywords": [
@@ -13,7 +13,7 @@
     "sync"
   ],
   "module": "settings-sync.js",
-  "repository": "git@github.com:ajagnanan/ha-settings-sync.git",
+  "repository": "git@github.com:ajagnanan/lovelace-settings-sync.git",
   "author": "Adrian J",
   "license": "MIT",
   "dependencies": {

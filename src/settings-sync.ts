@@ -44,7 +44,7 @@ class SettingsSync extends LitElement implements LovelaceCard {
     if (!config.sensor) {
       throw new Error('You need "sensor" defined that holds the JSON config String');
     }
-    if (!config.render_ui) {
+    if (config.render_ui == undefined) {
       throw new Error('You need "render_ui" defined to specify if a UI should be rendered');
     }
 
