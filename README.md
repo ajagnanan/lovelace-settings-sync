@@ -61,5 +61,5 @@ username: admin
 
 ## References
 
-Project based on: https://community.home-assistant.io/t/wth-why-most-settings-are-browser-instance-dependant/468419/16
-HA Custom Card: https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card/
+- Project based on: https://community.home-assistant.io/t/wth-why-most-settings-are-browser-instance-dependant/468419/16
+- HA Custom Card: https://developers.home-assistant.io/docs/frontend/custom-ui/custom-card/
