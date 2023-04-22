@@ -44,10 +44,10 @@ resources:
 
 ### Sensor
 
-This card will need a REST endpoint which will store the Settings JSON. A REST Sensor will be needed that will then store these settings in Home Assistant. An example of the [rest sensor](samples/rest_sensor.yaml) and [settings.json](samples/settings.json) are provided. The "Key" is the Username of the Setting.
-**The REST Sensor is needed because we can use Attributes to store a String lenght greater than 255, which is the limit of the State value.**
+This card requires a REST endpoint which will serve the Settings JSON. A REST Sensor will be needed that will then retrieve these settings into Home Assistant. An example of the [rest sensor](samples/rest_sensor.yaml) and [settings.json](samples/settings.json) are provided. The "Key" is the Username of the Setting.
+**The REST Sensor is needed because Attributes allow a String lenght greater than 255, which is the limit of the State value.**
 
-CloudFlare Workers offers a way to host the REST endpoint. See [cf_worker.js](samples/cf_worker.js) for a basic example of the worker code.
+CloudFlare Workers offer a way to host the REST endpoint. See [cf_worker.js](samples/cf_worker.js) for a basic example of the worker code.
 
 ### Card
 
