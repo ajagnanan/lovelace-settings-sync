@@ -27,7 +27,7 @@ resources:
 
 | Name          | Type    | Requirement  | Description                                                                                     |
 | ------------- | ------- | ------------ | ----------------------------------------------------------------------------------------------- |
-| type          | string  | **Required** | `custom:custom:settings-sync`                                                                   |
+| type          | string  | **Required** | `custom:settings-sync`                                                                          |
 | enabled       | boolean | **Required** | Enable card                                                                                     |
 | sensor        | sensor  | **Required** | The Sensor that holds the User Settings JSON retrieved by the REST API                          |
 | render_ui     | boolean | **Required** | If the UI should be rendered                                                                    |
