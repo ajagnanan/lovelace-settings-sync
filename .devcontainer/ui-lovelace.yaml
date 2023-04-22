@@ -1,0 +1,10 @@
+resources:
+  - url: http://127.0.0.1:5000/settings-sync.js
+    type: module
+views:
+  - cards:
+      - type: custom:settings-sync
+        enabled: true
+        sensor: sensor.settings_sync
+        username: admin
+        render_ui: true

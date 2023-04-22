@@ -44,37 +44,40 @@ class SettingsSync extends LitElement implements LovelaceCard {
     if (!config.sensor) {
       throw new Error('You need "sensor" defined that holds the JSON config String');
     }
+    if (!config.render_ui) {
+      throw new Error('You need "render_ui" defined to specify if a UI should be rendered');
+    }
 
     this._config = config;
   }
 
   protected render(): TemplateResult | void {
-    if (!this._config || !this._hass) {
+    if (this._config?.render_ui) {
+      return html`
+        <ha-card style="padding: 12px">
+          <div class="content">
+            <div class="icon-container" role="button" tabindex="0" style="display: inline-block">
+              <ha-tile-icon
+                class="icon"
+                data-domain="sensor"
+                data-state="3.4.3"
+                style="display: inline-block"
+              ></ha-tile-icon>
+              <ha-icon
+                icon="mdi:information-variant"
+                style="display: inline-block; vertical-align: top; margin: 8px 0 0 -33px"
+              ></ha-icon>
+            </div>
+            <div class="info" style="display: inline-block; vertical-align: top; padding: 10px 13px">
+              <span class="primary">Synced Sensor: </span>
+              <span class="secondary" style="font-weight: bold">${this._lit_sensor}:${this._lit_username}</span>
+            </div>
+          </div>
+        </ha-card>
+      `;
+    } else {
       return html``;
     }
-
-    return html`
-      <ha-card style="padding: 12px">
-        <div class="content">
-          <div class="icon-container" role="button" tabindex="0" style="display: inline-block">
-            <ha-tile-icon
-              class="icon"
-              data-domain="sensor"
-              data-state="3.4.3"
-              style="display: inline-block"
-            ></ha-tile-icon>
-            <ha-icon
-              icon="mdi:information-variant"
-              style="display: inline-block; vertical-align: top; margin: 8px 0 0 -33px"
-            ></ha-icon>
-          </div>
-          <div class="info" style="display: inline-block; vertical-align: top; padding: 10px 13px">
-            <span class="primary">Synced Sensor: </span>
-            <span class="secondary" style="font-weight: bold">${this._lit_sensor}:${this._lit_username}</span>
-          </div>
-        </div>
-      </ha-card>
-    `;
   }
 
   public async loadSettings(settings: any = {}): Promise<void> {

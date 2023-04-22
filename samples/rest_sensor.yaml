@@ -1,0 +1,12 @@
+- platform: rest
+  unique_id: rest_settings_sync
+  name: "Settings Sync"
+  resource: https://<api_url>
+  #verify_ssl: false
+  #json_attributes_path: "$.results"
+  json_attributes:
+    - admin
+  value_template: "{{ value_json['status']}}"
+  #scan_interval: 65
+  #timeout: 10
+  
