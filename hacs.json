@@ -1,5 +1,6 @@
 {
   "name": "Settings Sync",
   "render_readme": true,
-  "homeassistant": "0.110.0"
+  "homeassistant": "0.110.0",
+  "filename": "settings-sync.js"
 }
