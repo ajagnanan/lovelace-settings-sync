@@ -15,13 +15,31 @@ Home Assistant version 0.110.0 or higher is required as of release 1.0.0 of sett
 
 ## Installation
 
-Use [HACS](https://hacs.xyz) or follow this [guide](https://github.com/thomasloven/hass-config/wiki/Lovelace-Plugins)
+### HACS
 
-```yaml
-resources:
-  url: /local/settings-sync.js
-  type: module
-```
+Settings Sync is available in [HACS](https://hacs.xyz) (Home Assistant Community Store).
+
+1. Install HACS if you don't have it already
+2. Open HACS in Home Assistant
+3. Go to "Frontend" section
+4. Click 3 dots on top right and custom repository
+5. Add `https://github.com/ajagnanan/lovelace-settings-sync` with catagory `Lovelace`
+6. Search for "Settings Sync" and install
+
+### Manual
+
+1. Download `settings-sync.js` file from the [`latest release`](https://github.com/ajagnanan/lovelace-settings-sync/releases).
+2. Put `settings-sync.js` file into your `config/www` folder.
+3. Add reference to `settings-sync.js` in Dashboard. There's two way to do that:
+    - **Using UI:** _Settings_ → _Dashboards_ → _More Options icon_ → _Resources_ → _Add Resource_ → Set _Url_ as `/local/settings-sync.js` → Set _Resource type_ as `JavaScript Module`.
+      **Note:** If you do not see the Resources menu, you will need to enable _Advanced Mode_ in your _User Profile_
+    - **Using YAML:** Add following code to `lovelace` section.
+  
+        ```yaml
+        resources:
+            - url: /local/settings-sync.js
+              type: module
+        ```
 
 ## Options
 
@@ -44,10 +62,13 @@ resources:
 
 ### Sensor
 
-This card requires a REST endpoint which will serve the Settings JSON. A REST Sensor will be needed that will then retrieve these settings into Home Assistant. An example of the [rest sensor](samples/rest_sensor.yaml) and [settings.json](samples/settings.json) are provided. The "Key" is the Username of the Setting.
+This card requires a REST endpoint which will serve the Settings JSON. A REST Sensor will be needed that will then retrieve these settings into Home Assistant. An example of the [rest sensor](samples/rest_sensor.yaml) and [settings.json](samples/settings.json) are provided. The `Key` is the `Name` (all lowercase) of the User for whom the Setting is for.
+
 **The REST Sensor is needed because Attributes allow a String lenght greater than 255, which is the limit of the State value.**
 
-CloudFlare Workers offer a way to host the REST endpoint. See [cf_worker.js](samples/cf_worker.js) for a basic example of the worker code.
+#### REST API
+
+CloudFlare Workers offer a way to host the REST endpoint. See [cf_worker.js](samples/cf_worker.js) for a basic example of the worker code. **This can be hosted anywhere though, whether on a Cloud or Local service**.
 
 ### Card
 

@@ -14,6 +14,10 @@ export default {
           '["lovelace","dwains-dashboard","wall-dashboard","a0d7b954_vscode","e4641267_portainer","a0d7b954_ssh","hacs"]',
         suspendWhenHidden: 'true',
         vibrate: 'true',
+      },
+      "user2": {
+        defaultPanel: "\"lovelace\"",
+        dockedSidebar: "\"always_hidden\"",
       }
     };
 
