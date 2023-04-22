@@ -30,7 +30,7 @@ resources:
 | type          | string  | **Required** | `custom:custom:settings-sync`                                                                   |
 | enabled       | boolean | **Required** | Enable card                                                                                     |
 | sensor        | sensor  | **Required** | The Sensor that holds the User Settings JSON retrieved by the REST API                          |
-| username      | string  | **Optional** | Optional Username or default is the Logged In User                                              |
+| username      | string  | **Optional** | Optional Username or default is the Logged In User (this matches up with the JSON)              |
 
 [commits-shield]: https://img.shields.io/github/commit-activity/y/ajagnanan/ha-settings-sync.svg?style=for-the-badge
 [commits]: https://github.com/ajagnanan/ha-settings-sync/commits/master
@@ -38,6 +38,15 @@ resources:
 [maintenance-shield]: https://img.shields.io/badge/maintainer-ajagnanan-blue.svg?style=for-the-badge
 [releases-shield]: https://img.shields.io/github/release/ajagnanan/ha-settings-sync.svg?style=for-the-badge
 [releases]: https://github.com/ajagnanan/ha-settings-sync/releases
+
+## Configuration
+
+```yaml
+type: custom:settings-sync
+enabled: true
+sensor: sensor.settings_sync
+username: admin
+```
 
 ## References
 
